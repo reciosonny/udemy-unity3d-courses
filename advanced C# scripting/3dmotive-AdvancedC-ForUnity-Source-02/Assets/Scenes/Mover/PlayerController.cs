@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	public LayerMask GroundLayer;
 
 	// Use this for initialization
-	void Awake () 
+	void Awake ()
 	{
 		ThisController = GetComponent<CharacterController>();
 		ThisTransform = GetComponent<Transform>();
@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
 		float Horz = CrossPlatformInputManager.GetAxis("Horizontal");
 		float Vert = CrossPlatformInputManager.GetAxis("Vertical");
 
+//		ThisTransform.rotation *= Quaternion.Euler(new Vector3(0,RotateSpeed * Time.deltaTime * Horz,0));
+//		ThisController.SimpleMove (ThisTransform.forward * MaxSpeed * Vert); //no Time.deltaTime since it already has it implemented
+
+		//actual codes
 		ThisTransform.rotation *= Quaternion.Euler(new Vector3(0,RotateSpeed * Time.deltaTime * Horz,0));
 
 		//Calculate Move Dir
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
 		//Move
 		ThisController.Move(ThisTransform.TransformDirection(Velocity) * Time.deltaTime);
+
 	}
 
 	public float DistanceToGround()

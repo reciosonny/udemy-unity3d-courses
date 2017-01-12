@@ -13,16 +13,23 @@ public class RotateTo : MonoBehaviour
 	//Damped Speed
 	public float Damping = 10f;
 	//---------------------------------------------------
+
+	private Transform ThisTransform = null;
 	// Update is called once per frame
 	void Update () 
 	{
-		RotateTowardsWithDamp();
+//		RotateTowardsWithDamp();
+		ThisTransform = GetComponent<Transform>();
+
+		Quaternion DestRot = Quaternion.LookRotation (Target.position-ThisTransform.position, Vector3.up);
+		ThisTransform.rotation = Quaternion.RotateTowards(ThisTransform.rotation, DestRot, RotSpeed);
 	}
+
 	//---------------------------------------------------
 	//Call this function in update to directly and continually look at a target position
 	void LookAtImmediate()
 	{
-		transform.rotation = Quaternion.LookRotation(Target.position-transform.position,Vector3.up);
+		transform.rotation = Quaternion.LookRotation(Target.position-transform.position, Vector3.up);
 	}
 	//---------------------------------------------------
 	void RotateTowards()

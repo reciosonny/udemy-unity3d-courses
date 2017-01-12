@@ -15,18 +15,21 @@ public class GizmoShow : MonoBehaviour
 	[Range(0f,100f)]
 	public float Range = 10f;
 
+	[Range(0f,2f)]
+	public float test;
+
 	//Display forward vector
 	//---------------------------------------------------
 	void OnDrawGizmos() 
 	{
 		//Exit if gizmo drawing is disabled
 		if(!ShowGizmos)return;
-
+		
 		//Draw selected icon
 		Gizmos.DrawIcon(transform.position, MyIcon, true);
 
 		//Draw color wire sphere
-		Gizmos.color = Color.green;
+		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireSphere(transform.position, Range);
 
 		//Draw forward vector

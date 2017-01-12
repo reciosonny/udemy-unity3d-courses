@@ -3,12 +3,17 @@ using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 //---------------------------------------------------
+
+/// <summary>
+/// This code snippet allows the orbiter to rotate around the pivot point. Attach this script to orbiter.
+/// </summary>
 public class Orbiter : MonoBehaviour 
 {
 	//---------------------------------------------------
 	public Transform Pivot = null;
 	private Transform ThisTransform = null;
-	private Quaternion DestRot = Quaternion.identity;
+	private Quaternion DestRot = Quaternion.identity; //initialize quaternion. Identity = no quaternion rotation
+
 	//Distance to maintain from pivot
 	public float PivotDistance = 5f;
 	public float RotSpeed = 10f;
@@ -23,7 +28,9 @@ public class Orbiter : MonoBehaviour
 	void Update()
 	{
 		float Horz = CrossPlatformInputManager.GetAxis("Horizontal");
-		float Vert = CrossPlatformInputManager.GetAxis("Vertical");
+		float Vert = 1f;//CrossPlatformInputManager.GetAxis("Vertical");
+		Debug.Log ("Horizontal value: "+Horz);
+		Debug.Log ("Vertical value: "+Vert);
 
 		RotX += Vert * Time.deltaTime * RotSpeed;
 		RotY += Horz * Time.deltaTime * RotSpeed;
