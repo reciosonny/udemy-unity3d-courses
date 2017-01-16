@@ -22,9 +22,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	        agent.updatePosition = true;
         }
 
-
         private void Update()
         {
+			if (target == null)
+				target = GameObject.FindGameObjectWithTag ("Player").transform;
+			
             if (target != null)
                 agent.SetDestination(target.position);
 
