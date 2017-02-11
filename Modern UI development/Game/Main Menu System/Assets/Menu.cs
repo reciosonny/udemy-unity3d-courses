@@ -27,17 +27,12 @@ public class Menu : MonoBehaviour {
     }
 
     public void Update() {
-        //Debug.Log(_animator.GetCurrentAnimatorStateInfo(0).IsName("Open"));
 
         if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Open")) {
             _canvasGroup.blocksRaycasts = _canvasGroup.interactable = false;
-            //_canvasGroup.blocksRaycasts = false;
-            //_canvasGroup.interactable = false;
         }
         else {
             _canvasGroup.blocksRaycasts = _canvasGroup.interactable = true;
-            //_canvasGroup.blocksRaycasts = true;
-            //_canvasGroup.interactable = true;
         }
     }
 }
