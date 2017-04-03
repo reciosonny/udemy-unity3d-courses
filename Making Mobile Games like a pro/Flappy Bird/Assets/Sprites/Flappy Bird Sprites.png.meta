@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cc46098258fd34343a1a8b666d20fe4f
-timeCreated: 1487778597
+timeCreated: 1491222440
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,29 +8,29 @@ TextureImporter:
     21300002: Pipe Green
     21300004: FB blue 1
     21300006: FB red 1
-    21300008: Flappy Bird Sprites_4
+    21300008: FB green 1
     21300010: Instructions
     21300012: FB blue 2
     21300014: FB red 2
-    21300016: Flappy Bird Sprites_9
+    21300016: FB green 2
     21300018: FB blue 3
     21300020: FB red 3
-    21300022: Flappy Bird Sprites_14
+    21300022: FB green 3
     21300024: Flappy Bird Sprites_17
     21300026: Flappy Bird Sprites_18
     21300028: FB blue 4
     21300030: FB red 4
-    21300032: Flappy Bird Sprites_22
-    21300034: Flappy Bird Sprites_23
-    21300036: Flappy Bird Sprites_24
-    21300038: Flappy Bird Sprites_25
-    21300040: Flappy Bird Sprites_26
-    21300042: Flappy Bird Sprites_27
-    21300044: Flappy Bird Sprites_28
-    21300046: Flappy Bird Sprites_29
-    21300048: Flappy Bird Sprites_30
+    21300032: FB green 4
+    21300034: Pause Menu
+    21300036: Button Empty
+    21300038: Google Playstore
+    21300040: Bronze Medal
+    21300042: Gold Medal
+    21300044: Silver Medal
+    21300046: Pause Button
+    21300048: Play Button
     21300050: Ground
-    21300052: Flappy Bird Sprites_32
+    21300052: Menu Button
     21300054: Play
     21300056: Leaderboards
     21300058: Twitter
@@ -96,6 +96,22 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -152,12 +168,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_4
+      name: FB green 1
       rect:
         serializedVersion: 2
-        x: 440
-        y: 1007
-        width: 101
+        x: 436
+        y: 1008
+        width: 104
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -204,7 +220,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_9
+      name: FB green 2
       rect:
         serializedVersion: 2
         x: 432
@@ -243,7 +259,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_14
+      name: FB green 3
       rect:
         serializedVersion: 2
         x: 432
@@ -308,7 +324,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_22
+      name: FB green 4
       rect:
         serializedVersion: 2
         x: 430
@@ -321,20 +337,20 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_23
+      name: Pause Menu
       rect:
         serializedVersion: 2
         x: 581
-        y: 573
+        y: 570
         width: 495
-        height: 249
+        height: 252
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_24
+      name: Button Empty
       rect:
         serializedVersion: 2
         x: 214
@@ -347,7 +363,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_25
+      name: Google Playstore
       rect:
         serializedVersion: 2
         x: 397
@@ -360,7 +376,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_26
+      name: Bronze Medal
       rect:
         serializedVersion: 2
         x: 209
@@ -373,7 +389,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_27
+      name: Gold Medal
       rect:
         serializedVersion: 2
         x: 317
@@ -386,7 +402,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_28
+      name: Silver Medal
       rect:
         serializedVersion: 2
         x: 425
@@ -399,7 +415,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_29
+      name: Pause Button
       rect:
         serializedVersion: 2
         x: 542
@@ -412,7 +428,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_30
+      name: Play Button
       rect:
         serializedVersion: 2
         x: 660
@@ -438,7 +454,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Flappy Bird Sprites_32
+      name: Menu Button
       rect:
         serializedVersion: 2
         x: 19

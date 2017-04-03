@@ -55,6 +55,7 @@ public class BirdScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 	}
 
 	void FixedUpdate () {
