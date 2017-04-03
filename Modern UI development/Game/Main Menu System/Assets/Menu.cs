@@ -5,7 +5,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour {
     private Animator _animator;
     private CanvasGroup _canvasGroup;
-
+    
     public bool IsOpen
     {
         get

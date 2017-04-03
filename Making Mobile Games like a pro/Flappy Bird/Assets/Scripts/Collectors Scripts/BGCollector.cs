@@ -29,9 +29,10 @@ public class BGCollector : MonoBehaviour {
 			}
 		}
 		Debug.Log ("BGcollector instantiate");
+//		Debug.Log (backgrounds.Length);
 	}
 
-	void OntriggerEnter2D(Collider2D target) {
+	void OnTriggerEnter2D(Collider2D target) {
 		Debug.Log ("collided");
 
 		if (target.tag == "Background") {
@@ -51,13 +52,5 @@ public class BGCollector : MonoBehaviour {
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
