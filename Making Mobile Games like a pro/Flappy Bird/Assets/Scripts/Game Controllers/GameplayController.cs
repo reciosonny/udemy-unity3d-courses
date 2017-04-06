@@ -57,7 +57,7 @@ public class GameplayController : MonoBehaviour {
 	public void PlayGame() {
 		scoreText.gameObject.SetActive (true);
 		birds [GameController.instance.GetSelectedBird ()].SetActive (true);
-		instructionsButton.gameObject.SetActive (true);
+		instructionsButton.gameObject.SetActive (false);
 		Time.timeScale = 1f;
 	}
 
@@ -95,19 +95,14 @@ public class GameplayController : MonoBehaviour {
 			}
 
 		}
-
-
 		restartGameButton.onClick.RemoveAllListeners ();
 		restartGameButton.onClick.AddListener (() => RestartGame());
 	}
 
-
-
 	void Awake() {
 		MakeInstance ();
 		pausePanel.SetActive (false);
-
-//		Time.timeScale = 0f;
+		Time.timeScale = 0f; //needed to freeze game to display instructions
 	}
 
 	// Use this for initialization

@@ -24,8 +24,6 @@ public class BirdScript : MonoBehaviour {
 	private AudioClip pingAudioClip;
 
 	public int playerScore=0;
-	[SerializeField]
-	private Text txtPlayerScore;
 
 	private bool didFlap;
 	public bool isAlive;
@@ -108,8 +106,6 @@ public class BirdScript : MonoBehaviour {
 
 			playerScore += 1;
 			GameplayController.instance.SetScore (playerScore);
-
-			txtPlayerScore.text = playerScore.ToString();
 		}
 
 	}
