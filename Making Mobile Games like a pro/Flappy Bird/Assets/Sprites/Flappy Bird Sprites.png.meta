@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cc46098258fd34343a1a8b666d20fe4f
-timeCreated: 1491222440
+timeCreated: 1491392779
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -26,7 +26,7 @@ TextureImporter:
     21300038: Google Playstore
     21300040: Bronze Medal
     21300042: Gold Medal
-    21300044: Silver Medal
+    21300044: White Medal
     21300046: Pause Button
     21300048: Play Button
     21300050: Ground
@@ -402,7 +402,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Silver Medal
+      name: White Medal
       rect:
         serializedVersion: 2
         x: 425

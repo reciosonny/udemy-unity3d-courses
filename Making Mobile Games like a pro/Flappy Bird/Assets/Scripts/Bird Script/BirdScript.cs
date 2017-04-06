@@ -23,7 +23,7 @@ public class BirdScript : MonoBehaviour {
 	[SerializeField]
 	private AudioClip pingAudioClip;
 
-	private float playerScore=0f;
+	public int playerScore=0;
 	[SerializeField]
 	private Text txtPlayerScore;
 
@@ -43,19 +43,30 @@ public class BirdScript : MonoBehaviour {
 
 		flapButton = GameObject.FindGameObjectWithTag ("FlapButton").GetComponent<Button> ();
 		flapButton.onClick.AddListener (() => {
-			if (this.isAlive) {
-				FlapTheBird();
-				audioSource.clip = flyAudioClip;
-				audioSource.Play();
-			}
+			FlyBird();
 		});
 
 		SetCamerasX ();
 	}
 
+	private void FlyBird() {
+		if (this.isAlive) {
+			FlapTheBird();
+			audioSource.clip = flyAudioClip;
+			audioSource.Play();
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		
+	}
+
+	void Update() {
+
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			FlyBird ();
+		}
 	}
 
 	void FixedUpdate () {
@@ -96,6 +107,8 @@ public class BirdScript : MonoBehaviour {
 			audioSource.Play ();
 
 			playerScore += 1;
+			GameplayController.instance.SetScore (playerScore);
+
 			txtPlayerScore.text = playerScore.ToString();
 		}
 
@@ -110,6 +123,8 @@ public class BirdScript : MonoBehaviour {
 				this.isAlive = false;
 				anim.SetTrigger ("Bird Died");
 				audioSource.Play ();
+
+				GameplayController.instance.PlayerDiedShowScore (playerScore);
 			}
 		} 
 
