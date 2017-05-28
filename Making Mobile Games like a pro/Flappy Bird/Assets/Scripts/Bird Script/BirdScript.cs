@@ -80,8 +80,6 @@ public class BirdScript : MonoBehaviour {
 			}
 
 			if (myRigidBody.velocity.y >= 0) {
-
-//				transform.rotation = Quaternion.Euler (0, 0, 0);
 			} else {
 				
 				//todo: implementation for turning the bird downward if velocity is less than or equal to 0
@@ -107,7 +105,6 @@ public class BirdScript : MonoBehaviour {
 			playerScore += 1;
 			GameplayController.instance.SetScore (playerScore);
 		}
-
 	}
 
 	void OnCollisionEnter2D(Collision2D target) {
